@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz sobre o Alfabeto</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff; /* Cor de fundo suave */
+            color: #333;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #2c3e50; /* Cor do título */
+        }
+        table {
+            width: 100%;
+            border: 1px solid #ddd;
+            margin-top: 20px;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: #3498db; /* Azul para o cabeçalho */
+            color: white;
+        }
+        a {
+            text-decoration: none;
+            color: #2980b9; /* Azul para links */
+        }
+        a:hover {
+            text-decoration: underline;
+            color: #1abc9c; /* Verde claro ao passar o mouse */
+        }
+        .feedback {
+            text-align: center;
+            font-size: 1.5em;
+            margin-top: 20px;
+            padding: 10px;
+            border: 2px solid;
+            display: none;
+        }
+        .correct {
+            color: #155724; /* Verde para feedback correto */
+            background-color: #d4edda; /* Fundo verde claro */
+            border-color: #c3e6cb;
+        }
+        .wrong {
+            color: #721c24; /* Vermelho para feedback errado */
+            background-color: #f8d7da; /* Fundo vermelho claro */
+            border-color: #f5c6cb;
+        }
+        img {
+            display: block;
+            margin: 20px auto;
+            width: 300px; /* Ajuste o tamanho da imagem conforme necessário */
+            border: 2px solid #3498db; /* Borda azul na imagem */
+        }
+        h2 {
+            color: #8e44ad; /* Roxo para subtítulos */
+        }
+        ul {
+            list-style-type: none; /* Remove marcadores da lista */
+            padding: 0;
+        }
+        li {
+            background-color: #ecf0f1; /* Fundo claro para itens da lista */
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #bdc3c7; /* Borda cinza */
+        }
+    </style>
+    <script>
+        function showFeedback(isCorrect) {
+            var feedback = document.getElementById('feedback');
+            if (isCorrect) {
+                feedback.textContent = 'Resposta Correta! Parabéns!';
+                feedback.className = 'feedback correct';
+            } else {
+                feedback.textContent = 'Resposta Errada! Tente novamente.';
+                feedback.className = 'feedback wrong';
+            }
+            feedback.style.display = 'block';
+        }
+    </script>
+</head>
+<body>
+
+<h1>Quiz sobre o Alfabeto</h1>
+
+<table>
+    <tr>
+        <th>Pergunta</th>
+        <th>Opções</th>
+    </tr>
+    <tr>
+        <td>Qual é a primeira letra do alfabeto?</td>
+        <td>
+            <a href="#" onclick="showFeedback(true)">A) A</a><br>
+            <a href="#" onclick="showFeedback(false)">B) B</a><br>
+            <a href="#" onclick="showFeedback(false)">C) C</a>
+        </td>
+    </tr>
+    <tr>
+        <td>Quantas letras existem no alfabeto português?</td>
+        <td>
+            <a href="#" onclick="showFeedback(false)">A) 26</a><br>
+            <a href="#" onclick="showFeedback(true)">B) 23</a><br>
+            <a href="#" onclick="showFeedback(false)">C) 27</a>
+        </td>
+    </tr>
+    <tr>
+        <td>Qual letra representa o som de "ê" no alfabeto?</td>
+        <td>
+            <a href="#" onclick="showFeedback(true)">A) E</a><br>
+            <a href="#" onclick="showFeedback(false)">B) I</a><br>
+            <a href="#" onclick="showFeedback(false)">C) U</a>
+        </td>
+    </tr>
+    <tr>
+        <td>Qual das seguintes letras não faz parte do alfabeto?</td>
+        <td>
+            <a href="#" onclick="showFeedback(false)">A) K</a><br>
+            <a href="#" onclick="showFeedback(false)">B) W</a><br>
+            <a href="#" onclick="showFeedback(true)">C) Ç</a>
+        </td>
+    </tr>
+</table>
+
+<div id="feedback" class="feedback"></div>
+
+<h2>Imagens do Alfabeto</h2>
+
+<img src="imagem/alfabeto1.png" alt="Imagem do Alfabeto" />
+
+<h2>Listas de Letras</h2>
+<ul>
+    <li>A - primeira letra</li>
+    <li>B - segunda letra</li>
+    <li>C - terceira letra</li>
+    <li>D - quarta letra</li>
+    <li>E - quinta letra</li>
+</ul>
+
+</body>
+</html>
+
